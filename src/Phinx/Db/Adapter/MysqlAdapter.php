@@ -824,6 +824,9 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
             case static::PHINX_TYPE_SET:
                 return array('name' => 'set');
                 break;
+            case static::PHINX_TYPE_JSON:
+                return array('name' => 'json');
+                break;
             default:
                 throw new \RuntimeException('The type: "' . $type . '" is not supported.');
         }
